@@ -14,11 +14,11 @@ export default async function HomePage() {
     sort: '-createdAt',
     limit: 10,
   })
-
-  console.log('Total posts:', posts)
+   const jsonPosts = JSON.stringify(posts, null, 2)
+  console.log('Total posts:', jsonPosts)
 
   return (
-    <div className='h-screen w-full bg-blue-500'>
+    <div className='h-screen w-full bg-blue-500 dark:bg-red-600'>
       <h1>Blog Posts</h1>
       {posts.length === 0 && <p>No posts found</p>}
       {posts.map((post: any) => (
