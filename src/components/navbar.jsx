@@ -13,9 +13,9 @@ export default function Navbar() {
   const navBg = useTransform(
     scrollY,
     [0, 80],
-    ["rgba(0,0,0,0)", "rgba(0,0,0,0.85)"]
+    ["rgba(0,0,0,0)", "rgba(0,0,0,0)"]
   );
-  const navBlur = useTransform(scrollY, [0, 80], ["blur(0px)", "blur(16px)"]);
+  const navBlur = useTransform(scrollY, [0, 10], ["blur(10px)", "blur(25px)"]);
 
   useEffect(() => setMounted(true), []);
 
