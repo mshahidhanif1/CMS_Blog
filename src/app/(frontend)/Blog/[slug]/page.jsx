@@ -138,7 +138,7 @@ export default async function BlogPost({ params }) {
   const post = docs[0];
   if (!post) notFound();
   const headings = extractHeadings(post.content);
-  console.log("headings",JSON.stringify(headings))
+  // console.log("headings",JSON.stringify(headings))
 
   return (
     <main className="min-h-screen bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
